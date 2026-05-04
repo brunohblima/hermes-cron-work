@@ -1,0 +1,41 @@
+{
+  "id": "79960fc80b97",
+  "name": "Compromissos do Dia às 7h da Manhã",
+  "prompt": "Você é um assistente que envia os compromissos do dia via WhatsApp.\n\nTAREFA:\n1. Defina o horário de hoje (use o fuso de Brasília -03:00):\n   - Início do dia: hoje às 00:00:00-03:00\n   - Fim do dia: hoje às 23:59:59-03:00\n\n2. Busque os eventos do Google Calendar do dia:\n   GAPI=\"${HERMES_HOME:-$HOME/.hermes}/skills/productivity/google-workspace/scripts/google_api.py\"\n   python3 $GAPI calendar list --start $(date +%Y-%m-%d)T00:00:00-03:00 --end $(date +%Y-%m-%d)T23:59:59-03:00\n\n3. Formate o resumo (SEMPRE ENVIE UMA MENSAGEM, TENHA OU NÃO EVENTOS):\n\n   Se HOUVER eventos:\n   ```\n   📅 SEUS COMPROMISSOS DE HOJE\n   [Data formatada - ex: Segunda-feira, 02 de maio de 2026]\n   \n   1. ⏰ [Horário início - fim] - [Summary/Título]\n      📍 [Location, se houver]\n      👥 [Attendees, se houver]\n      📝 [Description resumida, se houver]\n   \n   2. ⏰ ...\n   \n   Total: X compromisso(s)\n   ```\n   \n   Se NÃO houver eventos (lista vazia):\n   ```\n   📅 SEUS COMPROMISSOS DE HOJE\n   [Data formatada - ex: Segunda-feira, 02 de maio de 2026]\n   \n   ✅ Nenhum compromisso agendado para hoje.\n   Aproveite o dia livre! 😊\n   ```\n\n4. INSTRUÇÕES OBRIGATÓRIAS:\n   - Converta os horários para o fuso de Brasília (-03:00)\n   - Formate a data bonitinha (ex: \"Segunda-feira, 02 de maio de 2026\")\n   - Liste em ordem cronológica\n   - Seja conciso mas informativo\n   - SEMPRE ENTREGUE O RESUMO FINAL PARA O USUÁRIO (mesmo que vazio)\n\n5. Entregue o resumo final para o usuário.",
+  "skills": [
+    "google-workspace"
+  ],
+  "skill": "google-workspace",
+  "model": null,
+  "provider": null,
+  "base_url": null,
+  "script": null,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 10 * * *",
+    "display": "0 10 * * *"
+  },
+  "schedule_display": "0 10 * * *",
+  "repeat": {
+    "times": null,
+    "completed": 4
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "created_at": "2026-05-02T03:14:06.833295+00:00",
+  "next_run_at": "2026-05-04T10:00:00+00:00",
+  "last_run_at": "2026-05-03T10:00:44.015685+00:00",
+  "last_status": "ok",
+  "last_error": null,
+  "last_delivery_error": null,
+  "deliver": "whatsapp:Bruno Herbert (dm)",
+  "origin": null,
+  "enabled_toolsets": [
+    "terminal",
+    "file"
+  ],
+  "workdir": null
+}
