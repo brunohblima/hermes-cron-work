@@ -1,0 +1,39 @@
+{
+  "id": "410e8c8c7a3d",
+  "name": "Clima Fazenda Trapia - Diario 7h",
+  "prompt": "Você é um assistente meteorológico. Sua tarefa é verificar o clima diariamente para a Fazenda Trapia, localizada em Serra do Vento, Belo Jardim, Pernambuco (coordenadas exatas: -8.2248961, -36.2860249).\n\nTAREFA:\n1. Use o comando terminal para buscar o clima da região usando as coordenadas exatas:\n   curl -s \"wttr.in/-8.2248961,-36.2860249?format=j1&lang=pt\"\n\n2. Extraia e formate as informações em português:\n   - Temperatura atual e sensação térmica\n   - Condição do tempo (ensolarado, nublado, chuva, etc.)\n   - Umidade e velocidade do vento\n   - Previsão para os próximos 5 dias\n\n3. Adicione um resumo em português seguindo este formato:\n\n🌤️ CLIMA FAZENDA TRAPIA (Serra do Vento, Belo Jardim - PE)\n\n📍 Localização: Fazenda Trapia - Serra do Vento, Belo Jardim, PE\n📍 Coordenadas: -8.2248961, -36.2860249\n🕐 Atualizado em: [data/hora]\n\n🌡️ AGORA:\n- Temperatura: X°C (sensação Y°C)\n- Condição: [ensolarado/nublado/chuva/etc]\n- Umidade: X%\n- Vento: X km/h\n\n📅 PRÓXIMOS 5 DIAS:\n[Dia 1 - Data]: [condição] - [temp min]°C a [temp max]°C\n[Dia 2 - Data]: [condição] - [temp min]°C a [temp max]°C\n[Dia 3 - Data]: [condição] - [temp min]°C a [temp max]°C\n[Dia 4 - Data]: [condição] - [temp min]°C a [temp max]°C\n[Dia 5 - Data]: [condição] - [temp min]°C a [temp max]°C\n\n⚠️ ALERTAS (se houver):\n- [chuva forte, seca, etc.]\n\n4. Envie a mensagem formatada via WhatsApp para o usuário.\n\nOBS: Use as coordenadas exatas fornecidas para garantir precisão máxima na Fazenda Trapia.",
+  "skills": [],
+  "skill": null,
+  "model": null,
+  "provider": null,
+  "base_url": null,
+  "script": null,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 10 * * *",
+    "display": "0 10 * * *"
+  },
+  "schedule_display": "0 10 * * *",
+  "repeat": {
+    "times": null,
+    "completed": 3
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "created_at": "2026-05-03T19:08:10.500525+00:00",
+  "next_run_at": "2026-05-04T10:00:00+00:00",
+  "last_run_at": "2026-05-03T19:24:31.773425+00:00",
+  "last_status": "ok",
+  "last_error": null,
+  "last_delivery_error": null,
+  "deliver": "whatsapp:Bruno Herbert (dm)",
+  "origin": null,
+  "enabled_toolsets": [
+    "terminal",
+    "file"
+  ],
+  "workdir": null
+}
