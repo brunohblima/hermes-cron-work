@@ -1,16 +1,45 @@
 # Hermes Cron Work
 
-Repositório para versionamento das configurações de cron jobs do Hermes Agent criadas por Bruno Herbert.
+Repositório para versionamento e controle de configurações de cron jobs do Hermes Agent criados por Bruno Herbert.
 
-## Estrutura
-- `cron-jobs.json`: Configurações atuais dos 4 cron jobs ativos (emails, compromissos, clima)
-- Futuras atualizações incluirão prompts completos, logs de execução e relatórios.
+## 📁 Estrutura do Projeto
 
-## Cron Jobs Ativos
-1. **Resumo de Emails a Cada 4 Horas** (ID: 7074fa1a2497)
-2. **Compromissos do Dia à 7h da Manhã** (ID: 79960fc80b97)
-3. **Resumo de Emails (GROQ) a Cada 4 Horas** (ID: c702f7a813f4)
-4. **Clima Fazenda Trapia - Diario 7h** (ID: 410e8c8c7a3d)
+```
+hermes-cron-work/
+├── README.md                    # Este arquivo
+├── CHANGELOG.md                # Histórico de alterações
+├── .gitignore                  # Arquivos ignorados pelo Git
+├── docs/                       # Documentação adicional
+│   └── setup.md               # Instruções de configuração
+├── jobs/                       # Configurações individuais dos cron jobs
+│   ├── email-summary/         # Resumo de emails (padrão)
+│   ├── email-groq/            # Resumo de emails (GROQ)
+│   ├── calendar-events/       # Compromissos do dia
+│   └── weather-forecast/      # Previsão do tempo (Fazenda Trapia)
+└── scripts/                    # Scripts auxiliares (se houver)
+```
 
-## Como Atualizar
-As configurações são exportadas do Hermes Agent e commitadas aqui para controle de versão.
+## 🚀 Cron Jobs Ativos
+
+| ID | Nome | Schedule | Skill | Status |
+|----|------|----------|-------|--------|
+| `7074fa1a2497` | Resumo de Emails (4h) | `0 */4 * * *` | google-workspace | ✅ Ativo |
+| `79960fc80b97` | Compromissos do Dia (7h) | `0 10 * * *` | google-workspace | ✅ Ativo |
+| `c702f7a813f4` | Resumo de Emails GROQ (4h) | `0 */4 * * *` | google-workspace | ✅ Ativo |
+| `410e8c8c7a3d` | Clima Fazenda Trapia (7h) | `0 10 * * *` | - | ✅ Ativo |
+
+## 📝 Como Contribuir / Atualizar
+
+1. Edite os arquivos de configuração no diretório `jobs/`
+2. Atualize o `CHANGELOG.md` com as alterações
+3. Faça commit com mensagem descritiva seguindo [Conventional Commits](https://www.conventionalcommits.org/)
+4. Push para o repositório
+
+## 🔗 Links Úteis
+
+- [Documentação do Hermes Agent](https://hermes-agent.nousresearch.com/docs)
+- [GitHub MCP Server](https://github.com/modelcontextprotocol/servers)
+
+## 📄 Licença
+
+Este projeto é privado e pertence a Bruno Herbert.
