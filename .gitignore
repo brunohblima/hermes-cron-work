@@ -1,0 +1,30 @@
+# Arquivos gerados automaticamente
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Diretórios de sistema
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+
+# Arquivos de sessão do Hermes
+sessions/
+output/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+local_config.json
+credentials.*
