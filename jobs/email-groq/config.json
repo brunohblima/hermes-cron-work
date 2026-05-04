@@ -1,0 +1,41 @@
+{
+  "id": "c702f7a813f4",
+  "name": "Resumo de Emails (GROQ) a Cada 4 Horas",
+  "prompt": "Você é um assistente executivo especializado em triagem e síntese de e-mails corporativos.\n\nTAREFA:\n1. Use a skill \"google-workspace\" ou comandos de terminal para buscar os emails recentes do Gmail (últimas 4 horas)\n2. Filtre emails descartáveis: promoções, newsletters, noreply, já lidos\n3. Para os emails importantes encontrados, use o comando terminal para chamar o resumidor Groq:\n   python3 /root/.hermes/scripts/groq_email_summarizer.py \"CONTEUDO_DO_EMAIL\"\n4. Formate a saída com prefixo [GROQ] no início\n5. Envie o resumo via WhatsApp\n\nSe não houver emails importantes, envie: \"[GROQ] ✅ Nenhum email importante nas últimas 4 horas.\"\n\nESTRUTURA DO RESUMO (usada pelo script Groq):\n📧 RESUMO DO EMAIL\n🚨 URGENTE\n📩 AGUARDANDO RESPOSTA  \nℹ️ INFORMATIVOS\n📊 ESTATÍSTICAS\n📝 DETALHES",
+  "skills": [
+    "google-workspace"
+  ],
+  "skill": "google-workspace",
+  "model": null,
+  "provider": null,
+  "base_url": null,
+  "script": null,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 */4 * * *",
+    "display": "0 */4 * * *"
+  },
+  "schedule_display": "0 */4 * * *",
+  "repeat": {
+    "times": null,
+    "completed": 3
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "created_at": "2026-05-03T19:01:33.240792+00:00",
+  "next_run_at": "2026-05-04T08:00:00+00:00",
+  "last_run_at": "2026-05-04T04:01:36.680678+00:00",
+  "last_status": "ok",
+  "last_error": null,
+  "last_delivery_error": null,
+  "deliver": "whatsapp:Bruno Herbert (dm)",
+  "origin": null,
+  "enabled_toolsets": [
+    "terminal",
+    "file"
+  ],
+  "workdir": null
+}
