@@ -1,0 +1,50 @@
+[
+  {
+    "job_id": "7074fa1a2497",
+    "name": "Resumo de Emails a Cada 4 Horas",
+    "skill": "google-workspace",
+    "skills": ["google-workspace"],
+    "prompt_preview": "Você é um assistente executivo especializado em triagem e síntese de e-mails corporativos...",
+    "schedule": "0 */4 * * *",
+    "repeat": "forever",
+    "deliver": "whatsapp:Bruno Herbert (dm)",
+    "enabled": true,
+    "enabled_toolsets": ["terminal", "file"]
+  },
+  {
+    "job_id": "79960fc80b97",
+    "name": "Compromissos do Dia à 7h da Manhã",
+    "skill": "google-workspace",
+    "skills": ["google-workspace"],
+    "prompt_preview": "Você é um assistente que envia os compromissos do dia via WhatsApp...",
+    "schedule": "0 10 * * *",
+    "repeat": "forever",
+    "deliver": "whatsapp:Bruno Herbert (dm)",
+    "enabled": true,
+    "enabled_toolsets": ["terminal", "file"]
+  },
+  {
+    "job_id": "c702f7a813f4",
+    "name": "Resumo de Emails (GROQ) a Cada 4 Horas",
+    "skill": "google-workspace",
+    "skills": ["google-workspace"],
+    "prompt_preview": "Você é um assistente executivo especializado em triagem e síntese de e-mails corporativos...",
+    "schedule": "0 */4 * * *",
+    "repeat": "forever",
+    "deliver": "whatsapp:Bruno Herbert (dm)",
+    "enabled": true,
+    "enabled_toolsets": ["terminal", "file"]
+  },
+  {
+    "job_id": "410e8c8c7a3d",
+    "name": "Clima Fazenda Trapia - Diario 7h",
+    "skill": null,
+    "skills": [],
+    "prompt_preview": "Você é um assistente meteorológico. Sua tarefa é verificar o clima diariamente para a Fazenda Trapia...",
+    "schedule": "0 10 * * *",
+    "repeat": "forever",
+    "deliver": "whatsapp:Bruno Herbert (dm)",
+    "enabled": true,
+    "enabled_toolsets": ["terminal", "file"]
+  }
+]
